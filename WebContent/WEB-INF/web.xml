@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>HttpServletExample1</display-name>
+  <welcome-file-list>
+    <welcome-file>person.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>Aadhar</servlet-name>
+  	<servlet-class>org.nlt.controller.AadharController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Aadhar</servlet-name>
+  	<url-pattern>/aadhar</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+  	<servlet-name>Test</servlet-name>
+  	<servlet-class>org.nlt.controller.TestController</servlet-class>
+  		<init-param>
+  			<param-name>fname</param-name>
+  			<param-value>Mayuri</param-value>
+  		</init-param>
+  		<init-param>
+  			<param-name>lname</param-name>
+  			<param-value>Nandurkar</param-value>
+  		</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Test</servlet-name>
+  	<url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>Demo</servlet-name>
+  	<servlet-class>org.nlt.controller.DemoController</servlet-class>
+  		<init-param>
+  			<param-name>fname</param-name>
+  			<param-value>Tejaswini</param-value>
+  		</init-param>
+  		<init-param>
+  			<param-name>lname</param-name>
+  			<param-value>Jumale</param-value>
+  		</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Demo</servlet-name>
+  	<url-pattern>/demo</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>company</param-name>
+  	<param-value>NLT Infotech Pvt Ltd</param-value>
+  </context-param>
+  
+  <listener>
+  		<listener-class>org.nlt.listener.TestListener1</listener-class>
+  </listener>
+  
+   <listener>
+  		<listener-class>org.nlt.listener.TestListener2</listener-class>
+  </listener>
+  
+   <listener>
+  		<listener-class>org.nlt.listener.TestListener3</listener-class>
+  </listener>
+  
+   <servlet>
+  	<servlet-name>Person</servlet-name>
+  	<servlet-class>org.nlt.controller.PersonController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Person</servlet-name>
+  	<url-pattern>/person</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>org.nlt.filter.TestFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<url-pattern>/person</url-pattern>
+  </filter-mapping>
+</web-app>
